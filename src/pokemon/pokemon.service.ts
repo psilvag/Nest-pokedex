@@ -45,7 +45,7 @@ export class PokemonService {
     .sort({
       no:1  // el 1 le indica que lo ordene de menor a mayor
     })
-    .select('-__v') // quitamos la propiedad __v
+    .select('-__v') // quitamos la propiedad __v con el signo -
   }
 
   async findOne(param: string) {

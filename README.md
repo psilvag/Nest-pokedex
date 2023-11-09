@@ -27,8 +27,12 @@ npm i -g @nestjs/cli
 ```
 docker-compose up -d
 ```
-5. Reconstruir la base de datos: Ejcutar 
+5. Ejecutar en modo desarrollo
 ```
-Metodo GET 
+yarn start:dev
+```
+6. Reconstruir la base de datos: Ejcutar 
+```
+GET 
 http://localhost:3000/api/v2/seed
 ```
