@@ -39,3 +39,19 @@ GET
 http://localhost:3000/api/v2/seed
 ```
 
+# Build de production
+
+1. Crear el archivo 
+__.env.prod__
+2. Llenar las variables de entorno de prod
+3. Crear la nueva imagen
+
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up --build
+```
+4. Levantar  la imagen nuevamente despues de build
+
+```
+docker-compose -f docker-compose.prod.yaml --env-file .env.prod up -d
+```
+Nota: Si se hace un cambio al proyecto es necesario volver a crear el build: Volver a ejecutar paso 3
