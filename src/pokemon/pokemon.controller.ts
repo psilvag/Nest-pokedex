@@ -10,7 +10,9 @@ import { PaginationDto } from '../common/dto/pagination.dto';
 
 @Controller('pokemon')
 export class PokemonController {
-  constructor(private readonly pokemonService: PokemonService) {}
+  constructor(
+    private readonly pokemonService: PokemonService
+  ) {}
 
   @Post()
   //@HttpCode(HttpStatus.OK) // HttpStatus.OK lo transforma a  status 200
