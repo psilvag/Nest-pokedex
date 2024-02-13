@@ -1,6 +1,7 @@
 
 import { Prop, Schema } from "@nestjs/mongoose/dist/decorators"
 import { SchemaFactory } from "@nestjs/mongoose/dist/factories"
+import { ApiProperty } from "@nestjs/swagger"
 import { Document } from "mongoose"
 
 
@@ -11,12 +12,23 @@ import { Document } from "mongoose"
 @Schema()
 export class Pokemon extends Document{
    //id lo genera mongo automaticamente
+   @ApiProperty({
+    description:'Pokemon name',
+    uniqueItems:true,
+    example:'Pikachu'
+}) 
   @Prop({
     unique:true,
     index:true  // son indices 
   }) 
   name:string
-  
+
+
+  @ApiProperty({
+    description:'Pokemon number',
+    uniqueItems:true,
+    example:3
+}) 
   @Prop({
     unique:true,
     index:true
