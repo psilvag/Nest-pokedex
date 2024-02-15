@@ -2,6 +2,11 @@
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
 </p>
 
+# Acerca de la API
+
+Este proyecto es una interfaz para el manejo de personajes pokemon, los datos iniciales se cargan en la base de datos por medio de un seeder que es montado con la respuesta de la API de pokemon ```https://pokeapi.co/```. 
+En lA API se puede realizar el CRUD completo de los personajes de pokemon (Crear, Leer, Actualizar y Eliminar). Como base de datos se utiliza ```MongoDB``` montado en un contenedor de ```Docker``` usando la imagen de MongoDB:5
+
 # 🚀 Guia para la ejecución NEST-POKEDEX 
 
 # Stack usado
@@ -11,6 +16,8 @@
 * TypeScript
 * Docker
 * Nest
+* Axios
+* Joi 
 
 
 # Ejecutar en desarrollo

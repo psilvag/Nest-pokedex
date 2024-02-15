@@ -23,7 +23,7 @@ export class SeedService {
    await this.pokemonModel.deleteMany({}) 
    const pokemontoInsert:{name:string,no:number}[]=[]
    const data= await this.http.get<PokeResponse>(this.URL)
-   data.results.forEach(({name,url})=>{
+    data.results.forEach(({name,url})=>{
     const segments= url.split('/')
     const no:number= +segments[segments.length-2]
     pokemontoInsert.push({name,no})
@@ -33,13 +33,12 @@ export class SeedService {
    await  this.pokemonModel.insertMany(pokemontoInsert)
    return 'Seed Executed succesfully.------Database ready------.'
   }
-
   
 }
 
 
 /**Insertar un pokemon a la vez
- * 
+ * METODO 2
  * @Injectable()
 export class SeedService {
   private readonly axios: AxiosInstance=axios
@@ -66,8 +65,8 @@ export class SeedService {
  */
 
 
-/**Insertar multiples registros. 
- * METODO 1
+/**Insertar multiples registros usando AWAIT PROMISE.ALL[] 
+ * METODO 3
  * 
  * @Injectable()
 export class SeedService {
@@ -102,8 +101,4 @@ export class SeedService {
 }
 */ 
 
-/**
- * Insertar multiples registros con una sola insersion usando insertMany de Mongoose
- * METODO 2 implementado arriba
- */
 
