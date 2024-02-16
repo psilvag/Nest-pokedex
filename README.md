@@ -4,8 +4,9 @@
 
 # Acerca de la API
 
-Este proyecto es una interfaz para el manejo de personajes pokemon, los datos iniciales se cargan en la base de datos por medio de un seeder que es montado con la respuesta de la API de pokemon ```https://pokeapi.co/```. 
-En lA API se puede realizar el CRUD completo de los personajes de pokemon (Crear, Leer, Actualizar y Eliminar). Como base de datos se utiliza ```MongoDB``` montado en un contenedor de ```Docker``` usando la imagen de MongoDB:5
+Este proyecto es una interfaz para el manejo de personajes pokemon, los datos iniciales se cargan en la base de datos por medio de un seeder que es montado con la respuesta de la API de pokemon [PokeAPI](https://pokeapi.co/).
+En la API se puede realizar el CRUD completo de los personajes de pokemon (Crear, Leer, Actualizar y Eliminar). 
+Como base de datos se utiliza ```MongoDB``` montado en un contenedor de ```Docker``` usando la imagen de MongoDB:5
 
 # 🚀 Guia para la ejecución NEST-POKEDEX 
 
@@ -32,6 +33,7 @@ npm i -g @nestjs/cli
 ```
 4. Clonar el archivo __.env.template__ y renombrar la copia  a __.env__
 5. Llenar las variables de entorno definidas en __.env__
+6. Abrir la aplicacion de docker en su computadora para que se reconozcan los comandos docker en la terminal (si no lo tiene instalado, descargue e instale [Docker](https://www.docker.com/products/docker-desktop/)
 6. Levantar la base de datos
 ```
 docker-compose up -d
@@ -46,7 +48,7 @@ GET
 http://localhost:3000/api/v2/seed
 ```
 
-# Build de production
+# Build de produccion
 
 1. Crear el archivo 
 __.env.prod__
